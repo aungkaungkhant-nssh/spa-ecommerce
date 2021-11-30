@@ -1,0 +1,36 @@
+<template>
+  <div>
+	<!-- Header -->
+	<public-header v-if="bar"></public-header>
+	<!--/ End Header -->
+	<router-view ></router-view>	
+	<!-- Start Footer Area -->
+	<public-footer v-if="bar"></public-footer>
+	<!-- /End Footer Area -->
+
+  </div>
+</template>
+
+<script>
+import PublicFooter from '../PublicFooter.vue'
+import PublicHeader from '../PublicHeader.vue'
+export default {
+  	components: { PublicHeader, PublicFooter },
+	computed:{  
+		bar(){
+			if(this.$route.path=="/register" || this.$route.path=="/login"){
+				return false;
+			}else{
+				return true;
+			}
+		}
+	}
+
+	
+
+}
+</script>
+
+<style>
+
+</style>
