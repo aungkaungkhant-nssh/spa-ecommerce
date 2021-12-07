@@ -1,6 +1,6 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
-import AuthRoute from './modules/AuthRoute'
+import UserAuth from './modules/UserAuth'
 
 Vue.use(Vuex)
-export default new Vuex.Store({modules:{AuthRoute}})
+export default new Vuex.Store({modules:{UserAuth}})

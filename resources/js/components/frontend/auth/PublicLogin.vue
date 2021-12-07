@@ -14,14 +14,22 @@
                        </div>
                     </div>
                     <div class="card-body">
-                        <form action="">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" v-if="errors && errors.length>0">
+                            {{errors}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form @submit.prevent="login">
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="email" class="form-control">
+                                <input type="email" class="form-control" v-model="user.email">
+                                <span v-if="errors.email" class="mt-1 text-danger">{{errors.email[0]}}</span>
                             </div>
                             <div class="form-group">
                                 <label for="">Password</label>
-                                <input type="password" class="form-control">
+                                <input type="password" class="form-control" v-model="user.password">
+                                <span v-if="errors.password" class="mt-1 text-danger">{{errors.password[0]}}</span>
                             </div>
                             <input type="submit" class="btn btn-primary" value="login">
                         </form>
@@ -37,13 +45,38 @@
 <script>
 import { mapActions,mapGetters } from 'vuex'
 export default {
-    created(){
-        this.setisAuthRoute(true)
+    data(){
+        return{
+            errors:"",
+            user:{  
+                email:"",
+                password:"",
+            }
+        }
     },
-    computed:{  ...mapGetters(["getisAuthRoute"])
+    computed:{ ...mapGetters(["getisAuthRoute"])
 	},
     methods:{
-        ...mapActions(["setisAuthRoute"]),
+        ...mapActions(["userAuth"]),
+         async login(){
+             try{
+                 //loading start
+                 this.$loading(true)
+                 /// user login
+                 await  axios.get('/sanctum/csrf-cookie')
+                 await axios.post("/api/login",this.user);
+                 //set user to vuex
+                 this.userAuth();
+                 //loading end
+                 this.$loading(false)
+                 this.$router.push("/");
+             }catch(error){
+                 //loading end
+                  this.$loading(false)
+                  if(error.response.status == 422)this.errors= error.response.data.errors;
+             }
+            
+         },
         back(){
              this.$router.push('/')
              this.setisAuthRoute(false)

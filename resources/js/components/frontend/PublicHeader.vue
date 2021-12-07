@@ -1,5 +1,6 @@
 <template>
   <header class="header shop">
+
 		<!-- Topbar -->
 		<div class="topbar">
 			<div class="container">
@@ -19,9 +20,15 @@
 						<div class="right-content">
 							<ul class="list-main">
 								<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-								<li><i class="ti-user"></i> <a href="#">My account</a></li>
-								<li><i class="ti-angle-right"></i><router-link to="/register">Register</router-link></li>
-								<li><i class="ti-power-off"></i><router-link to="/login">Login</router-link></li>
+								
+								<span v-if="!getAuthenticated">
+										<li><i class="ti-angle-right"></i><router-link to="/register">Register</router-link></li>
+										<li><i class="ti-power-off"></i><router-link to="/login">Login</router-link></li>
+								</span>
+								<span v-if="getAuthenticated">
+									<li><i class="ti-user"></i> <a href="#">  {{getUser.data.name}}</a></li>
+									<li @click="logout" style="cursor:pointer"><i class="ti-power-off"></i>Logout</li>
+								</span>
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -224,12 +231,33 @@
 		</div>
 		<!--/ End Header Inner -->
   </header>
+  
 </template>
 
 <script>
-
+import { mapActions, mapGetters } from 'vuex'
+import NProgress from 'nprogress'
 export default {
-	
+	computed:{...mapGetters(["getAuthenticated","getUser"])},
+	methods:{
+		...mapActions(["userAuth","userLogout"]),
+		async logout(){
+			NProgress.start();
+			//user logout
+			await axios.post("/api/logout");
+			NProgress.done();
+			/// user logout change data to vuex
+			this.userLogout();
+			// this.userLogout;
+		}
+	},
+	mounted(){
+		if(localStorage.getItem("authenticated")){
+			this.userAuth();
+			return;
+		}
+		
+	}
 }
 </script>
 
