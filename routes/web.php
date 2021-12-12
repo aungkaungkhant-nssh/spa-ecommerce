@@ -17,6 +17,9 @@ Route::get('/{any}', function () {
     return view('frontend.home');
 })->where('any', '.*');
 
+// Route::get("/admin/{any}",function(){
+//     return view("backend.home");
+// })->where('any', '.*');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
