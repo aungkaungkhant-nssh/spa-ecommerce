@@ -27,7 +27,8 @@ export default{
     actions:{
        async getAdminUser({commit}){
            try{
-               let response=await axios.get('/api/admin/get-admin')
+               
+               let response=await axios.get('/admin/get-admin')
                setTimeout(() => {
                 $("#datatable").DataTable({
                     lengthMenu: [
@@ -44,7 +45,7 @@ export default{
         },
         async editAdminUser({commit},id){
             try{
-                let response= await axios.get(`/api/admin/edit-admin/${id}`)
+                let response= await axios.get(`/admin/edit-admin/${id}`)
                 commit("updateAdminEdit",response.data.data)
             }catch(error){
                 console.log(error)
@@ -52,7 +53,7 @@ export default{
         },
         async updateAdminUser({commit},data){
             try{
-                 await axios.put(`/api/admin/update-admin`,data)
+                 await axios.put(`/admin/update-admin`,data)
                 commit("updateAdminEdit",{})
             }catch(error){
                 console.log(error)
@@ -60,7 +61,7 @@ export default{
         },
         async deleteAdminUser({commit},id){
             try{
-                await axios.delete(`/api/admin/delete-admin/${id}`);               
+                await axios.delete(`/admin/delete-admin/${id}`);               
                 commit("updateAdminDelete",id);
             }catch(error){
                 console.log(error)

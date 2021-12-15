@@ -72,13 +72,14 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 <script>
   $(document).ready(function(){
-        // $("#datatable").DataTable({
-        //     lengthMenu: [
-        //       [5,10, 25, 50, -1],
-        //       [5,10, 25, 50, "All"],
-        //     ],
-        //     pageLength: 5,
-        // });   
+    let token=document.head.querySelector('meta[name="csrf-token"]')
+        if(token){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN':token.content
+                }
+            });
+        }  
   })
 </script>
 </body>

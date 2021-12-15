@@ -45,8 +45,10 @@ export default {
   methods:{
     ...mapActions(["editAdminUser","updateAdminUser"]),
     updateAdmin(){
+     
         this.updateAdminUser(this.adminEdit);
         this.$router.push({name:"HomeAdmin"});
+      
          Toast.fire({
             icon: 'success',
             title: 'Admin User Update Success'

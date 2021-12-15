@@ -2107,6 +2107,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2135,117 +2143,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    adminLogout: function adminLogout() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+
+                _this.$loading(true);
+
+                _context.next = 4;
+                return axios.post("/admin/logout");
+
+              case 4:
+                _this.$loading(false);
+
+                _this.$router.push("/admin/login");
+
+                _context.next = 11;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+                console.log(_context.t0);
+
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 8]]);
+      }))();
+    }
+  }
+});
 
 /***/ }),
 
@@ -2410,32 +2347,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.prev = 0;
-                _context.next = 3;
-                return axios.post("/api/admin/create-admin", _this.admin);
 
-              case 3:
+                //start loading
+                _this.$loading(true);
+
+                _context.next = 4;
+                return axios.post("/admin/create-admin", _this.admin);
+
+              case 4:
                 _this.$router.push({
                   name: "HomeAdmin"
-                });
+                }); //end loading
+
+
+                _this.$loading(false);
 
                 Toast.fire({
                   icon: 'success',
                   title: 'Admin User Create Success'
                 });
-                _context.next = 10;
+                _context.next = 13;
                 break;
 
-              case 7:
-                _context.prev = 7;
+              case 9:
+                _context.prev = 9;
                 _context.t0 = _context["catch"](0);
+
+                //end loading
+                _this.$loading(false);
+
                 _this.errors = _context.t0.response.data.errors;
 
-              case 10:
+              case 13:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[0, 7]]);
+        }, _callee, null, [[0, 9]]);
       }))();
     }
   }
@@ -2599,6 +2547,119 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/auth/BackendLogin.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/auth/BackendLogin.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      admin: {
+        email: "",
+        password: ""
+      },
+      errors: ""
+    };
+  },
+  methods: {
+    adminLogin: function adminLogin() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+
+                //start loading
+                _this.$loading(true); //admin login
+
+
+                _context.next = 4;
+                return axios.post("/admin/login", _this.admin);
+
+              case 4:
+                //end loading
+                _this.$loading(false);
+
+                _this.$router.push("/admin/admin-user");
+
+                _context.next = 12;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+
+                //end loading
+                _this.$loading(false);
+
+                _this.errors = _context.t0.response.data.errors;
+
+              case 12:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 8]]);
+      }))();
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/main/BackendMaster.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/main/BackendMaster.vue?vue&type=script&lang=js& ***!
@@ -2645,6 +2706,15 @@ __webpack_require__.r(__webpack_exports__);
     BackendNavbar: _BackendNavbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     BackendSidbar: _BackendSidebar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     BackendFooter: _BackendFooter_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  computed: {
+    bar: function bar() {
+      if (this.$route.path == "/admin/login") {
+        return false;
+      } else {
+        return true;
+      }
+    }
   }
 });
 
@@ -2744,6 +2814,1898 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/frontend/PublicHome.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/frontend/PublicHome.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -2800,23 +4762,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _components_backend_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/backend/admin/HomeAdmin */ "./resources/js/components/backend/admin/HomeAdmin.vue");
-/* harmony import */ var _components_backend_admin_CreateAdmin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/backend/admin/CreateAdmin */ "./resources/js/components/backend/admin/CreateAdmin.vue");
-/* harmony import */ var _components_backend_admin_EditAdmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/backend/admin/EditAdmin */ "./resources/js/components/backend/admin/EditAdmin.vue");
+/* harmony import */ var _components_frontend_PublicHome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/frontend/PublicHome */ "./resources/js/components/frontend/PublicHome.vue");
+/* harmony import */ var _components_backend_auth_BackendLogin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/backend/auth/BackendLogin */ "./resources/js/components/backend/auth/BackendLogin.vue");
+/* harmony import */ var _components_backend_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/backend/admin/HomeAdmin */ "./resources/js/components/backend/admin/HomeAdmin.vue");
+/* harmony import */ var _components_backend_admin_CreateAdmin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/backend/admin/CreateAdmin */ "./resources/js/components/backend/admin/CreateAdmin.vue");
+/* harmony import */ var _components_backend_admin_EditAdmin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/backend/admin/EditAdmin */ "./resources/js/components/backend/admin/EditAdmin.vue");
+
+
 
 
 
 var routes = [{
+  path: '/',
+  component: _components_frontend_PublicHome__WEBPACK_IMPORTED_MODULE_0__["default"],
+  name: "Home"
+}, {
+  path: '/admin/login',
+  component: _components_backend_auth_BackendLogin__WEBPACK_IMPORTED_MODULE_1__["default"],
+  name: "BackEndLogin"
+}, {
   path: '/admin/admin-user',
-  component: _components_backend_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_0__["default"],
+  component: _components_backend_admin_HomeAdmin__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: "HomeAdmin"
 }, {
   path: '/admin/admin-user/create',
-  component: _components_backend_admin_CreateAdmin__WEBPACK_IMPORTED_MODULE_1__["default"],
+  component: _components_backend_admin_CreateAdmin__WEBPACK_IMPORTED_MODULE_3__["default"],
   name: "CreateAdmin"
 }, {
   path: '/admin/admin-user/edit/:id',
-  component: _components_backend_admin_EditAdmin__WEBPACK_IMPORTED_MODULE_2__["default"],
+  component: _components_backend_admin_EditAdmin__WEBPACK_IMPORTED_MODULE_4__["default"],
   name: "EditAdmin"
 }];
 
@@ -2907,7 +4881,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 commit = _ref.commit;
                 _context.prev = 1;
                 _context.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/admin/get-admin');
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/admin/get-admin');
 
               case 4:
                 response = _context.sent;
@@ -2944,7 +4918,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 commit = _ref2.commit;
                 _context2.prev = 1;
                 _context2.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/api/admin/edit-admin/".concat(id));
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().get("/admin/edit-admin/".concat(id));
 
               case 4:
                 response = _context2.sent;
@@ -2975,7 +4949,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 commit = _ref3.commit;
                 _context3.prev = 1;
                 _context3.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default().put("/api/admin/update-admin", data);
+                return axios__WEBPACK_IMPORTED_MODULE_1___default().put("/admin/update-admin", data);
 
               case 4:
                 commit("updateAdminEdit", {});
@@ -3005,7 +4979,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 commit = _ref4.commit;
                 _context4.prev = 1;
                 _context4.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/admin/delete-admin/".concat(id));
+                return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/admin/delete-admin/".concat(id));
 
               case 4:
                 commit("updateAdminDelete", id);
@@ -7456,6 +9430,54 @@ var ___CSS_LOADER_URL_REPLACEMENT_3___ = _css_loader_dist_runtime_getUrl_js__WEB
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = _css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_images_sort_desc_disabled_png__WEBPACK_IMPORTED_MODULE_6__["default"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "td.dt-control{background:url(\"https://www.datatables.net/examples/resources/details_open.png\") no-repeat center center;cursor:pointer}tr.dt-hasChild td.dt-control{background:url(\"https://www.datatables.net/examples/resources/details_close.png\") no-repeat center center}table.dataTable th.dt-left,table.dataTable td.dt-left{text-align:left}table.dataTable th.dt-center,table.dataTable td.dt-center,table.dataTable td.dataTables_empty{text-align:center}table.dataTable th.dt-right,table.dataTable td.dt-right{text-align:right}table.dataTable th.dt-justify,table.dataTable td.dt-justify{text-align:justify}table.dataTable th.dt-nowrap,table.dataTable td.dt-nowrap{white-space:nowrap}table.dataTable thead th.dt-head-left,table.dataTable thead td.dt-head-left,table.dataTable tfoot th.dt-head-left,table.dataTable tfoot td.dt-head-left{text-align:left}table.dataTable thead th.dt-head-center,table.dataTable thead td.dt-head-center,table.dataTable tfoot th.dt-head-center,table.dataTable tfoot td.dt-head-center{text-align:center}table.dataTable thead th.dt-head-right,table.dataTable thead td.dt-head-right,table.dataTable tfoot th.dt-head-right,table.dataTable tfoot td.dt-head-right{text-align:right}table.dataTable thead th.dt-head-justify,table.dataTable thead td.dt-head-justify,table.dataTable tfoot th.dt-head-justify,table.dataTable tfoot td.dt-head-justify{text-align:justify}table.dataTable thead th.dt-head-nowrap,table.dataTable thead td.dt-head-nowrap,table.dataTable tfoot th.dt-head-nowrap,table.dataTable tfoot td.dt-head-nowrap{white-space:nowrap}table.dataTable tbody th.dt-body-left,table.dataTable tbody td.dt-body-left{text-align:left}table.dataTable tbody th.dt-body-center,table.dataTable tbody td.dt-body-center{text-align:center}table.dataTable tbody th.dt-body-right,table.dataTable tbody td.dt-body-right{text-align:right}table.dataTable tbody th.dt-body-justify,table.dataTable tbody td.dt-body-justify{text-align:justify}table.dataTable tbody th.dt-body-nowrap,table.dataTable tbody td.dt-body-nowrap{white-space:nowrap}table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;border-spacing:0}table.dataTable thead th,table.dataTable tfoot th{font-weight:bold}table.dataTable thead th,table.dataTable thead td{padding:10px 18px;border-bottom:1px solid #111}table.dataTable thead th:active,table.dataTable thead td:active{outline:none}table.dataTable tfoot th,table.dataTable tfoot td{padding:10px 18px 6px 18px;border-top:1px solid #111}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;*cursor:hand;background-repeat:no-repeat;background-position:center right}table.dataTable thead .sorting{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ")}table.dataTable thead .sorting_asc{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") !important}table.dataTable thead .sorting_desc{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") !important}table.dataTable thead .sorting_asc_disabled{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ")}table.dataTable thead .sorting_desc_disabled{background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ")}table.dataTable tbody tr{background-color:#fff}table.dataTable tbody tr.selected{background-color:#b0bed9}table.dataTable tbody th,table.dataTable tbody td{padding:8px 10px}table.dataTable.row-border tbody th,table.dataTable.row-border tbody td,table.dataTable.display tbody th,table.dataTable.display tbody td{border-top:1px solid #ddd}table.dataTable.row-border tbody tr:first-child th,table.dataTable.row-border tbody tr:first-child td,table.dataTable.display tbody tr:first-child th,table.dataTable.display tbody tr:first-child td{border-top:none}table.dataTable.cell-border tbody th,table.dataTable.cell-border tbody td{border-top:1px solid #ddd;border-right:1px solid #ddd}table.dataTable.cell-border tbody tr th:first-child,table.dataTable.cell-border tbody tr td:first-child{border-left:1px solid #ddd}table.dataTable.cell-border tbody tr:first-child th,table.dataTable.cell-border tbody tr:first-child td{border-top:none}table.dataTable.stripe tbody tr.odd,table.dataTable.display tbody tr.odd{background-color:#f9f9f9}table.dataTable.stripe tbody tr.odd.selected,table.dataTable.display tbody tr.odd.selected{background-color:#acbad4}table.dataTable.hover tbody tr:hover,table.dataTable.display tbody tr:hover{background-color:#f6f6f6}table.dataTable.hover tbody tr:hover.selected,table.dataTable.display tbody tr:hover.selected{background-color:#aab7d1}table.dataTable.order-column tbody tr>.sorting_1,table.dataTable.order-column tbody tr>.sorting_2,table.dataTable.order-column tbody tr>.sorting_3,table.dataTable.display tbody tr>.sorting_1,table.dataTable.display tbody tr>.sorting_2,table.dataTable.display tbody tr>.sorting_3{background-color:#fafafa}table.dataTable.order-column tbody tr.selected>.sorting_1,table.dataTable.order-column tbody tr.selected>.sorting_2,table.dataTable.order-column tbody tr.selected>.sorting_3,table.dataTable.display tbody tr.selected>.sorting_1,table.dataTable.display tbody tr.selected>.sorting_2,table.dataTable.display tbody tr.selected>.sorting_3{background-color:#acbad5}table.dataTable.display tbody tr.odd>.sorting_1,table.dataTable.order-column.stripe tbody tr.odd>.sorting_1{background-color:#f1f1f1}table.dataTable.display tbody tr.odd>.sorting_2,table.dataTable.order-column.stripe tbody tr.odd>.sorting_2{background-color:#f3f3f3}table.dataTable.display tbody tr.odd>.sorting_3,table.dataTable.order-column.stripe tbody tr.odd>.sorting_3{background-color:whitesmoke}table.dataTable.display tbody tr.odd.selected>.sorting_1,table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_1{background-color:#a6b4cd}table.dataTable.display tbody tr.odd.selected>.sorting_2,table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_2{background-color:#a8b5cf}table.dataTable.display tbody tr.odd.selected>.sorting_3,table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_3{background-color:#a9b7d1}table.dataTable.display tbody tr.even>.sorting_1,table.dataTable.order-column.stripe tbody tr.even>.sorting_1{background-color:#fafafa}table.dataTable.display tbody tr.even>.sorting_2,table.dataTable.order-column.stripe tbody tr.even>.sorting_2{background-color:#fcfcfc}table.dataTable.display tbody tr.even>.sorting_3,table.dataTable.order-column.stripe tbody tr.even>.sorting_3{background-color:#fefefe}table.dataTable.display tbody tr.even.selected>.sorting_1,table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_1{background-color:#acbad5}table.dataTable.display tbody tr.even.selected>.sorting_2,table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_2{background-color:#aebcd6}table.dataTable.display tbody tr.even.selected>.sorting_3,table.dataTable.order-column.stripe tbody tr.even.selected>.sorting_3{background-color:#afbdd8}table.dataTable.display tbody tr:hover>.sorting_1,table.dataTable.order-column.hover tbody tr:hover>.sorting_1{background-color:#eaeaea}table.dataTable.display tbody tr:hover>.sorting_2,table.dataTable.order-column.hover tbody tr:hover>.sorting_2{background-color:#ececec}table.dataTable.display tbody tr:hover>.sorting_3,table.dataTable.order-column.hover tbody tr:hover>.sorting_3{background-color:#efefef}table.dataTable.display tbody tr:hover.selected>.sorting_1,table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_1{background-color:#a2aec7}table.dataTable.display tbody tr:hover.selected>.sorting_2,table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_2{background-color:#a3b0c9}table.dataTable.display tbody tr:hover.selected>.sorting_3,table.dataTable.order-column.hover tbody tr:hover.selected>.sorting_3{background-color:#a5b2cb}table.dataTable.no-footer{border-bottom:1px solid #111}table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}table.dataTable.compact thead th,table.dataTable.compact thead td{padding:4px 17px}table.dataTable.compact tfoot th,table.dataTable.compact tfoot td{padding:4px}table.dataTable.compact tbody th,table.dataTable.compact tbody td{padding:4px}table.dataTable th,table.dataTable td{box-sizing:content-box}.dataTables_wrapper{position:relative;clear:both}.dataTables_wrapper .dataTables_length{float:left}.dataTables_wrapper .dataTables_length select{border:1px solid #aaa;border-radius:3px;padding:5px;background-color:transparent;padding:4px}.dataTables_wrapper .dataTables_filter{float:right;text-align:right}.dataTables_wrapper .dataTables_filter input{border:1px solid #aaa;border-radius:3px;padding:5px;background-color:transparent;margin-left:3px}.dataTables_wrapper .dataTables_info{clear:both;float:left;padding-top:.755em}.dataTables_wrapper .dataTables_paginate{float:right;text-align:right;padding-top:.25em}.dataTables_wrapper .dataTables_paginate .paginate_button{box-sizing:border-box;display:inline-block;min-width:1.5em;padding:.5em 1em;margin-left:2px;text-align:center;text-decoration:none !important;cursor:pointer;*cursor:hand;color:#333 !important;border:1px solid transparent;border-radius:2px}.dataTables_wrapper .dataTables_paginate .paginate_button.current,.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{color:#333 !important;border:1px solid #979797;background-color:white;background:linear-gradient(to bottom, white 0%, #dcdcdc 100%)}.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{cursor:default;color:#666 !important;border:1px solid transparent;background:transparent;box-shadow:none}.dataTables_wrapper .dataTables_paginate .paginate_button:hover{color:white !important;border:1px solid #111;background-color:#585858;background:linear-gradient(to bottom, #585858 0%, #111 100%)}.dataTables_wrapper .dataTables_paginate .paginate_button:active{outline:none;background-color:#2b2b2b;background:linear-gradient(to bottom, #2b2b2b 0%, #0c0c0c 100%);box-shadow:inset 0 0 3px #111}.dataTables_wrapper .dataTables_paginate .ellipsis{padding:0 1em}.dataTables_wrapper .dataTables_processing{position:absolute;top:50%;left:50%;width:100%;height:40px;margin-left:-50%;margin-top:-25px;padding-top:20px;text-align:center;font-size:1.2em;background-color:white;background:linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%)}.dataTables_wrapper .dataTables_length,.dataTables_wrapper .dataTables_filter,.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_processing,.dataTables_wrapper .dataTables_paginate{color:#333}.dataTables_wrapper .dataTables_scroll{clear:both}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody{*margin-top:-1px;-webkit-overflow-scrolling:touch}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>th,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>td,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>th,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>td{vertical-align:middle}.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>th>div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>thead>tr>td>div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>th>div.dataTables_sizing,.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody>table>tbody>tr>td>div.dataTables_sizing{height:0;overflow:hidden;margin:0 !important;padding:0 !important}.dataTables_wrapper.no-footer .dataTables_scrollBody{border-bottom:1px solid #111}.dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable,.dataTables_wrapper.no-footer div.dataTables_scrollBody>table{border-bottom:none}.dataTables_wrapper:after{visibility:hidden;display:block;content:\"\";clear:both;height:0}@media screen and (max-width: 767px){.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_paginate{float:none;text-align:center}.dataTables_wrapper .dataTables_paginate{margin-top:.5em}}@media screen and (max-width: 640px){.dataTables_wrapper .dataTables_length,.dataTables_wrapper .dataTables_filter{float:none;text-align:center}.dataTables_wrapper .dataTables_filter{margin-top:.5em}}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/nprogress/nprogress.css":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/nprogress/nprogress.css ***!
+  \******************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "/* Make clicks pass-through */\n#nprogress {\n  pointer-events: none;\n}\n\n#nprogress .bar {\n  background: #29d;\n\n  position: fixed;\n  z-index: 1031;\n  top: 0;\n  left: 0;\n\n  width: 100%;\n  height: 2px;\n}\n\n/* Fancy blur effect */\n#nprogress .peg {\n  display: block;\n  position: absolute;\n  right: 0px;\n  width: 100px;\n  height: 100%;\n  box-shadow: 0 0 10px #29d, 0 0 5px #29d;\n  opacity: 1.0;\n  transform: rotate(3deg) translate(0px, -4px);\n}\n\n/* Remove these to get rid of the spinner */\n#nprogress .spinner {\n  display: block;\n  position: fixed;\n  z-index: 1031;\n  top: 15px;\n  right: 15px;\n}\n\n#nprogress .spinner-icon {\n  width: 18px;\n  height: 18px;\n  box-sizing: border-box;\n\n  border: solid 2px transparent;\n  border-top-color: #29d;\n  border-left-color: #29d;\n  border-radius: 50%;\n\n  -webkit-animation: nprogress-spinner 400ms linear infinite;\n          animation: nprogress-spinner 400ms linear infinite;\n}\n\n.nprogress-custom-parent {\n  overflow: hidden;\n  position: relative;\n}\n\n.nprogress-custom-parent #nprogress .spinner,\n.nprogress-custom-parent #nprogress .bar {\n  position: absolute;\n}\n\n@-webkit-keyframes nprogress-spinner {\n  0%   { -webkit-transform: rotate(0deg); }\n  100% { -webkit-transform: rotate(360deg); }\n}\n@keyframes nprogress-spinner {\n  0%   { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.loading-screen[data-v-7ab65994] {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  height: 100vh;\r\n  width: 100vw;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  z-index: 300;\r\n  flex-direction: column;\r\n  -webkit-user-select: none;\r\n     -moz-user-select: none;\r\n      -ms-user-select: none;\r\n          user-select: none;\n}\n.loading-circle[data-v-7ab65994] {\r\n  width: 50px;\r\n  height: 50px;\r\n  border-radius: 100%;\r\n  border: 2px solid transparent;\r\n  border-left-color: #ababab;\r\n  -webkit-animation: circleanimation-data-v-7ab65994 .45s linear infinite;\r\n          animation: circleanimation-data-v-7ab65994 .45s linear infinite\n}\n.loading-text[data-v-7ab65994] {\r\n  margin-top: 15px;\r\n  color: #808080;\r\n  font-size: 12px;\r\n  text-align: center;\n}\n@-webkit-keyframes circleanimation-data-v-7ab65994 {\nfrom {\r\n    transform: rotateZ(0deg);\n}\nto {\r\n    transform: rotateZ(360deg);\n}\n}\n@keyframes circleanimation-data-v-7ab65994 {\nfrom {\r\n    transform: rotateZ(0deg);\n}\nto {\r\n    transform: rotateZ(360deg);\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -51124,6 +53146,492 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./node_modules/nprogress/nprogress.js":
+/*!*********************************************!*\
+  !*** ./node_modules/nprogress/nprogress.js ***!
+  \*********************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @license MIT */
+
+;(function(root, factory) {
+
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+		__WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+
+})(this, function() {
+  var NProgress = {};
+
+  NProgress.version = '0.2.0';
+
+  var Settings = NProgress.settings = {
+    minimum: 0.08,
+    easing: 'ease',
+    positionUsing: '',
+    speed: 200,
+    trickle: true,
+    trickleRate: 0.02,
+    trickleSpeed: 800,
+    showSpinner: true,
+    barSelector: '[role="bar"]',
+    spinnerSelector: '[role="spinner"]',
+    parent: 'body',
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+  };
+
+  /**
+   * Updates configuration.
+   *
+   *     NProgress.configure({
+   *       minimum: 0.1
+   *     });
+   */
+  NProgress.configure = function(options) {
+    var key, value;
+    for (key in options) {
+      value = options[key];
+      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+    }
+
+    return this;
+  };
+
+  /**
+   * Last number.
+   */
+
+  NProgress.status = null;
+
+  /**
+   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
+   *
+   *     NProgress.set(0.4);
+   *     NProgress.set(1.0);
+   */
+
+  NProgress.set = function(n) {
+    var started = NProgress.isStarted();
+
+    n = clamp(n, Settings.minimum, 1);
+    NProgress.status = (n === 1 ? null : n);
+
+    var progress = NProgress.render(!started),
+        bar      = progress.querySelector(Settings.barSelector),
+        speed    = Settings.speed,
+        ease     = Settings.easing;
+
+    progress.offsetWidth; /* Repaint */
+
+    queue(function(next) {
+      // Set positionUsing if it hasn't already been set
+      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+
+      // Add transition
+      css(bar, barPositionCSS(n, speed, ease));
+
+      if (n === 1) {
+        // Fade out
+        css(progress, { 
+          transition: 'none', 
+          opacity: 1 
+        });
+        progress.offsetWidth; /* Repaint */
+
+        setTimeout(function() {
+          css(progress, { 
+            transition: 'all ' + speed + 'ms linear', 
+            opacity: 0 
+          });
+          setTimeout(function() {
+            NProgress.remove();
+            next();
+          }, speed);
+        }, speed);
+      } else {
+        setTimeout(next, speed);
+      }
+    });
+
+    return this;
+  };
+
+  NProgress.isStarted = function() {
+    return typeof NProgress.status === 'number';
+  };
+
+  /**
+   * Shows the progress bar.
+   * This is the same as setting the status to 0%, except that it doesn't go backwards.
+   *
+   *     NProgress.start();
+   *
+   */
+  NProgress.start = function() {
+    if (!NProgress.status) NProgress.set(0);
+
+    var work = function() {
+      setTimeout(function() {
+        if (!NProgress.status) return;
+        NProgress.trickle();
+        work();
+      }, Settings.trickleSpeed);
+    };
+
+    if (Settings.trickle) work();
+
+    return this;
+  };
+
+  /**
+   * Hides the progress bar.
+   * This is the *sort of* the same as setting the status to 100%, with the
+   * difference being `done()` makes some placebo effect of some realistic motion.
+   *
+   *     NProgress.done();
+   *
+   * If `true` is passed, it will show the progress bar even if its hidden.
+   *
+   *     NProgress.done(true);
+   */
+
+  NProgress.done = function(force) {
+    if (!force && !NProgress.status) return this;
+
+    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+  };
+
+  /**
+   * Increments by a random amount.
+   */
+
+  NProgress.inc = function(amount) {
+    var n = NProgress.status;
+
+    if (!n) {
+      return NProgress.start();
+    } else {
+      if (typeof amount !== 'number') {
+        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+      }
+
+      n = clamp(n + amount, 0, 0.994);
+      return NProgress.set(n);
+    }
+  };
+
+  NProgress.trickle = function() {
+    return NProgress.inc(Math.random() * Settings.trickleRate);
+  };
+
+  /**
+   * Waits for all supplied jQuery promises and
+   * increases the progress as the promises resolve.
+   *
+   * @param $promise jQUery Promise
+   */
+  (function() {
+    var initial = 0, current = 0;
+
+    NProgress.promise = function($promise) {
+      if (!$promise || $promise.state() === "resolved") {
+        return this;
+      }
+
+      if (current === 0) {
+        NProgress.start();
+      }
+
+      initial++;
+      current++;
+
+      $promise.always(function() {
+        current--;
+        if (current === 0) {
+            initial = 0;
+            NProgress.done();
+        } else {
+            NProgress.set((initial - current) / initial);
+        }
+      });
+
+      return this;
+    };
+
+  })();
+
+  /**
+   * (Internal) renders the progress bar markup based on the `template`
+   * setting.
+   */
+
+  NProgress.render = function(fromStart) {
+    if (NProgress.isRendered()) return document.getElementById('nprogress');
+
+    addClass(document.documentElement, 'nprogress-busy');
+    
+    var progress = document.createElement('div');
+    progress.id = 'nprogress';
+    progress.innerHTML = Settings.template;
+
+    var bar      = progress.querySelector(Settings.barSelector),
+        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
+        parent   = document.querySelector(Settings.parent),
+        spinner;
+    
+    css(bar, {
+      transition: 'all 0 linear',
+      transform: 'translate3d(' + perc + '%,0,0)'
+    });
+
+    if (!Settings.showSpinner) {
+      spinner = progress.querySelector(Settings.spinnerSelector);
+      spinner && removeElement(spinner);
+    }
+
+    if (parent != document.body) {
+      addClass(parent, 'nprogress-custom-parent');
+    }
+
+    parent.appendChild(progress);
+    return progress;
+  };
+
+  /**
+   * Removes the element. Opposite of render().
+   */
+
+  NProgress.remove = function() {
+    removeClass(document.documentElement, 'nprogress-busy');
+    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
+    var progress = document.getElementById('nprogress');
+    progress && removeElement(progress);
+  };
+
+  /**
+   * Checks if the progress bar is rendered.
+   */
+
+  NProgress.isRendered = function() {
+    return !!document.getElementById('nprogress');
+  };
+
+  /**
+   * Determine which positioning CSS rule to use.
+   */
+
+  NProgress.getPositioningCSS = function() {
+    // Sniff on document.body.style
+    var bodyStyle = document.body.style;
+
+    // Sniff prefixes
+    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
+                       ('MozTransform' in bodyStyle) ? 'Moz' :
+                       ('msTransform' in bodyStyle) ? 'ms' :
+                       ('OTransform' in bodyStyle) ? 'O' : '';
+
+    if (vendorPrefix + 'Perspective' in bodyStyle) {
+      // Modern browsers with 3D support, e.g. Webkit, IE10
+      return 'translate3d';
+    } else if (vendorPrefix + 'Transform' in bodyStyle) {
+      // Browsers without 3D support, e.g. IE9
+      return 'translate';
+    } else {
+      // Browsers without translate() support, e.g. IE7-8
+      return 'margin';
+    }
+  };
+
+  /**
+   * Helpers
+   */
+
+  function clamp(n, min, max) {
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
+  }
+
+  /**
+   * (Internal) converts a percentage (`0..1`) to a bar translateX
+   * percentage (`-100%..0%`).
+   */
+
+  function toBarPerc(n) {
+    return (-1 + n) * 100;
+  }
+
+
+  /**
+   * (Internal) returns the correct CSS for changing the bar's
+   * position given an n percentage, and speed and ease from Settings
+   */
+
+  function barPositionCSS(n, speed, ease) {
+    var barCSS;
+
+    if (Settings.positionUsing === 'translate3d') {
+      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
+    } else if (Settings.positionUsing === 'translate') {
+      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
+    } else {
+      barCSS = { 'margin-left': toBarPerc(n)+'%' };
+    }
+
+    barCSS.transition = 'all '+speed+'ms '+ease;
+
+    return barCSS;
+  }
+
+  /**
+   * (Internal) Queues a function to be executed.
+   */
+
+  var queue = (function() {
+    var pending = [];
+    
+    function next() {
+      var fn = pending.shift();
+      if (fn) {
+        fn(next);
+      }
+    }
+
+    return function(fn) {
+      pending.push(fn);
+      if (pending.length == 1) next();
+    };
+  })();
+
+  /**
+   * (Internal) Applies css properties to an element, similar to the jQuery 
+   * css method.
+   *
+   * While this helper does assist with vendor prefixed property names, it 
+   * does not perform any manipulation of values prior to setting styles.
+   */
+
+  var css = (function() {
+    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
+        cssProps    = {};
+
+    function camelCase(string) {
+      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
+        return letter.toUpperCase();
+      });
+    }
+
+    function getVendorProp(name) {
+      var style = document.body.style;
+      if (name in style) return name;
+
+      var i = cssPrefixes.length,
+          capName = name.charAt(0).toUpperCase() + name.slice(1),
+          vendorName;
+      while (i--) {
+        vendorName = cssPrefixes[i] + capName;
+        if (vendorName in style) return vendorName;
+      }
+
+      return name;
+    }
+
+    function getStyleProp(name) {
+      name = camelCase(name);
+      return cssProps[name] || (cssProps[name] = getVendorProp(name));
+    }
+
+    function applyCss(element, prop, value) {
+      prop = getStyleProp(prop);
+      element.style[prop] = value;
+    }
+
+    return function(element, properties) {
+      var args = arguments,
+          prop, 
+          value;
+
+      if (args.length == 2) {
+        for (prop in properties) {
+          value = properties[prop];
+          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
+        }
+      } else {
+        applyCss(element, args[1], args[2]);
+      }
+    }
+  })();
+
+  /**
+   * (Internal) Determines if an element or space separated list of class names contains a class name.
+   */
+
+  function hasClass(element, name) {
+    var list = typeof element == 'string' ? element : classList(element);
+    return list.indexOf(' ' + name + ' ') >= 0;
+  }
+
+  /**
+   * (Internal) Adds a class to an element.
+   */
+
+  function addClass(element, name) {
+    var oldList = classList(element),
+        newList = oldList + name;
+
+    if (hasClass(oldList, name)) return; 
+
+    // Trim the opening space.
+    element.className = newList.substring(1);
+  }
+
+  /**
+   * (Internal) Removes a class from an element.
+   */
+
+  function removeClass(element, name) {
+    var oldList = classList(element),
+        newList;
+
+    if (!hasClass(element, name)) return;
+
+    // Replace the class name.
+    newList = oldList.replace(' ' + name + ' ', ' ');
+
+    // Trim the opening and closing spaces.
+    element.className = newList.substring(1, newList.length - 1);
+  }
+
+  /**
+   * (Internal) Gets a space separated list of the class names on the element. 
+   * The list is wrapped with a single space on each end to facilitate finding 
+   * matches within the list.
+   */
+
+  function classList(element) {
+    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
+  }
+
+  /**
+   * (Internal) Removes an element from the DOM.
+   */
+
+  function removeElement(element) {
+    element && element.parentNode && element.parentNode.removeChild(element);
+  }
+
+  return NProgress;
+});
+
+
+
+/***/ }),
+
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -54773,6 +57281,66 @@ var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMP
 
 /***/ }),
 
+/***/ "./node_modules/nprogress/nprogress.css":
+/*!**********************************************!*\
+  !*** ./node_modules/nprogress/nprogress.css ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_nprogress_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./nprogress.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/nprogress/nprogress.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_nprogress_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_nprogress_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../vue-loader/lib/loaders/stylePostLoader.js!../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -58272,6 +60840,89 @@ if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAle
 
 /***/ }),
 
+/***/ "./node_modules/vuejs-loading-plugin/Loading.vue":
+/*!*******************************************************!*\
+  !*** ./node_modules/vuejs-loading-plugin/Loading.vue ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Loading.vue?vue&type=template&id=7ab65994&scoped=true& */ "./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true&");
+/* harmony import */ var _Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Loading.vue?vue&type=script&lang=js& */ "./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
+/* harmony import */ var _vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "7ab65994",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "node_modules/vuejs-loading-plugin/Loading.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data() {
+    return {
+      text: 'Loading',
+      dark: false,
+      classes: null,
+      loading: false,
+      background: null,
+      customLoader: null
+    }
+  },
+  computed:{
+    bc(){
+      return this.background || (this.dark ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)')
+    }
+  },
+});
+
+
+/***/ }),
+
 /***/ "./resources/js/components/backend/BackendFooter.vue":
 /*!***********************************************************!*\
   !*** ./resources/js/components/backend/BackendFooter.vue ***!
@@ -58506,6 +61157,45 @@ component.options.__file = "resources/js/components/backend/admin/HomeAdmin.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/backend/auth/BackendLogin.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/backend/auth/BackendLogin.vue ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BackendLogin_vue_vue_type_template_id_0ef66366___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BackendLogin.vue?vue&type=template&id=0ef66366& */ "./resources/js/components/backend/auth/BackendLogin.vue?vue&type=template&id=0ef66366&");
+/* harmony import */ var _BackendLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackendLogin.vue?vue&type=script&lang=js& */ "./resources/js/components/backend/auth/BackendLogin.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _BackendLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BackendLogin_vue_vue_type_template_id_0ef66366___WEBPACK_IMPORTED_MODULE_0__.render,
+  _BackendLogin_vue_vue_type_template_id_0ef66366___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/backend/auth/BackendLogin.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/backend/main/BackendMaster.vue":
 /*!****************************************************************!*\
   !*** ./resources/js/components/backend/main/BackendMaster.vue ***!
@@ -58623,6 +61313,45 @@ component.options.__file = "resources/js/components/backend/reuseable/Lists.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/frontend/PublicHome.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/frontend/PublicHome.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PublicHome_vue_vue_type_template_id_4221aaac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PublicHome.vue?vue&type=template&id=4221aaac& */ "./resources/js/components/frontend/PublicHome.vue?vue&type=template&id=4221aaac&");
+/* harmony import */ var _PublicHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PublicHome.vue?vue&type=script&lang=js& */ "./resources/js/components/frontend/PublicHome.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PublicHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PublicHome_vue_vue_type_template_id_4221aaac___WEBPACK_IMPORTED_MODULE_0__.render,
+  _PublicHome_vue_vue_type_template_id_4221aaac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/frontend/PublicHome.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/backend/BackendFooter.vue?vue&type=script&lang=js&":
 /*!************************************************************************************!*\
   !*** ./resources/js/components/backend/BackendFooter.vue?vue&type=script&lang=js& ***!
@@ -58719,6 +61448,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/backend/auth/BackendLogin.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/backend/auth/BackendLogin.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackendLogin.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/auth/BackendLogin.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendLogin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/backend/main/BackendMaster.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************!*\
   !*** ./resources/js/components/backend/main/BackendMaster.vue?vue&type=script&lang=js& ***!
@@ -58764,6 +61509,68 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lists_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lists.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/reuseable/Lists.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lists_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/frontend/PublicHome.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/frontend/PublicHome.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PublicHome.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/frontend/PublicHome.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicHome_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_dist_cjs_js_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_style_index_0_id_7ab65994_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../style-loader/dist/cjs.js!../css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../vue-loader/lib/loaders/stylePostLoader.js!../postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=style&index=0&id=7ab65994&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Loading_vue_vue_type_template_id_7ab65994_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../vue-loader/lib/index.js??vue-loader-options!./Loading.vue?vue&type=template&id=7ab65994&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true&");
+
 
 /***/ }),
 
@@ -58869,6 +61676,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/backend/auth/BackendLogin.vue?vue&type=template&id=0ef66366&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/backend/auth/BackendLogin.vue?vue&type=template&id=0ef66366& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendLogin_vue_vue_type_template_id_0ef66366___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendLogin_vue_vue_type_template_id_0ef66366___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BackendLogin_vue_vue_type_template_id_0ef66366___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackendLogin.vue?vue&type=template&id=0ef66366& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/auth/BackendLogin.vue?vue&type=template&id=0ef66366&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/backend/main/BackendMaster.vue?vue&type=template&id=1d1cbef4&":
 /*!***********************************************************************************************!*\
   !*** ./resources/js/components/backend/main/BackendMaster.vue?vue&type=template&id=1d1cbef4& ***!
@@ -58916,6 +61740,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lists_vue_vue_type_template_id_59b6c57e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lists_vue_vue_type_template_id_59b6c57e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lists.vue?vue&type=template&id=59b6c57e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/reuseable/Lists.vue?vue&type=template&id=59b6c57e&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/frontend/PublicHome.vue?vue&type=template&id=4221aaac&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/frontend/PublicHome.vue?vue&type=template&id=4221aaac& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicHome_vue_vue_type_template_id_4221aaac___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicHome_vue_vue_type_template_id_4221aaac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicHome_vue_vue_type_template_id_4221aaac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PublicHome.vue?vue&type=template&id=4221aaac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/frontend/PublicHome.vue?vue&type=template&id=4221aaac&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vuejs-loading-plugin/Loading.vue?vue&type=template&id=7ab65994&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.loading,
+          expression: "loading",
+        },
+      ],
+      staticClass: "loading-screen",
+      class: _vm.classes,
+      style: { backgroundColor: _vm.bc },
+    },
+    [
+      _vm.customLoader
+        ? _c(_vm.customLoader, { tag: "component" })
+        : _c("div", [
+            _c("div", { staticClass: "loading-circle" }),
+            _vm._v(" "),
+            _c("p", { staticClass: "loading-text" }, [
+              _vm._v(_vm._s(_vm.text)),
+            ]),
+          ]),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
 
 
 /***/ }),
@@ -58974,380 +61867,58 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "nav",
+    {
+      staticClass: "main-header navbar navbar-expand navbar-white navbar-light",
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("ul", { staticClass: "navbar-nav ml-auto" }, [
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-warning", on: { click: _vm.adminLogout } },
+            [
+              _vm._v("\n        Logout"),
+              _c("i", { staticClass: "fas fa-sign-out-alt ml-2" }),
+            ]
+          ),
+        ]),
+      ]),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      {
-        staticClass:
-          "main-header navbar navbar-expand navbar-white navbar-light",
-      },
-      [
-        _c("ul", { staticClass: "navbar-nav" }, [
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-widget": "pushmenu", href: "#", role: "button" },
-              },
-              [_c("i", { staticClass: "fas fa-bars" })]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
-            _c(
-              "a",
-              { staticClass: "nav-link", attrs: { href: "index3.html" } },
-              [_vm._v("Home")]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Contact"),
-            ]),
-          ]),
+    return _c("ul", { staticClass: "navbar-nav" }, [
+      _c("li", { staticClass: "nav-item" }, [
+        _c(
+          "a",
+          {
+            staticClass: "nav-link",
+            attrs: { "data-widget": "pushmenu", href: "#", role: "button" },
+          },
+          [_c("i", { staticClass: "fas fa-bars" })]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
+        _c("a", { staticClass: "nav-link", attrs: { href: "index3.html" } }, [
+          _vm._v("Home"),
         ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "navbar-nav ml-auto" }, [
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: {
-                  "data-widget": "navbar-search",
-                  href: "#",
-                  role: "button",
-                },
-              },
-              [_c("i", { staticClass: "fas fa-search" })]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "navbar-search-block" }, [
-              _c("form", { staticClass: "form-inline" }, [
-                _c("div", { staticClass: "input-group input-group-sm" }, [
-                  _c("input", {
-                    staticClass: "form-control form-control-navbar",
-                    attrs: {
-                      type: "search",
-                      placeholder: "Search",
-                      "aria-label": "Search",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "input-group-append" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-navbar",
-                        attrs: { type: "submit" },
-                      },
-                      [_c("i", { staticClass: "fas fa-search" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-navbar",
-                        attrs: {
-                          type: "button",
-                          "data-widget": "navbar-search",
-                        },
-                      },
-                      [_c("i", { staticClass: "fas fa-times" })]
-                    ),
-                  ]),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item dropdown" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "dropdown", href: "#" },
-              },
-              [
-                _c("i", { staticClass: "far fa-comments" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "badge badge-danger navbar-badge" }, [
-                  _vm._v("3"),
-                ]),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "dropdown-menu dropdown-menu-lg dropdown-menu-right",
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("div", { staticClass: "media" }, [
-                      _c("img", {
-                        staticClass: "img-size-50 mr-3 img-circle",
-                        attrs: {
-                          src: "dist/img/user1-128x128.jpg",
-                          alt: "User Avatar",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "media-body" }, [
-                        _c("h3", { staticClass: "dropdown-item-title" }, [
-                          _vm._v(
-                            "\n                Brad Diesel\n                "
-                          ),
-                          _c(
-                            "span",
-                            { staticClass: "float-right text-sm text-danger" },
-                            [_c("i", { staticClass: "fas fa-star" })]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-sm" }, [
-                          _vm._v("Call me whenever you can..."),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-sm text-muted" }, [
-                          _c("i", { staticClass: "far fa-clock mr-1" }),
-                          _vm._v(" 4 Hours Ago"),
-                        ]),
-                      ]),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("div", { staticClass: "media" }, [
-                      _c("img", {
-                        staticClass: "img-size-50 img-circle mr-3",
-                        attrs: {
-                          src: "dist/img/user8-128x128.jpg",
-                          alt: "User Avatar",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "media-body" }, [
-                        _c("h3", { staticClass: "dropdown-item-title" }, [
-                          _vm._v(
-                            "\n                John Pierce\n                "
-                          ),
-                          _c(
-                            "span",
-                            { staticClass: "float-right text-sm text-muted" },
-                            [_c("i", { staticClass: "fas fa-star" })]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-sm" }, [
-                          _vm._v("I got your message bro"),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-sm text-muted" }, [
-                          _c("i", { staticClass: "far fa-clock mr-1" }),
-                          _vm._v(" 4 Hours Ago"),
-                        ]),
-                      ]),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("div", { staticClass: "media" }, [
-                      _c("img", {
-                        staticClass: "img-size-50 img-circle mr-3",
-                        attrs: {
-                          src: "dist/img/user3-128x128.jpg",
-                          alt: "User Avatar",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "media-body" }, [
-                        _c("h3", { staticClass: "dropdown-item-title" }, [
-                          _vm._v(
-                            "\n                Nora Silvester\n                "
-                          ),
-                          _c(
-                            "span",
-                            { staticClass: "float-right text-sm text-warning" },
-                            [_c("i", { staticClass: "fas fa-star" })]
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-sm" }, [
-                          _vm._v("The subject goes here"),
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-sm text-muted" }, [
-                          _c("i", { staticClass: "far fa-clock mr-1" }),
-                          _vm._v(" 4 Hours Ago"),
-                        ]),
-                      ]),
-                    ]),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "dropdown-item dropdown-footer",
-                    attrs: { href: "#" },
-                  },
-                  [_vm._v("See All Messages")]
-                ),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item dropdown" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: { "data-toggle": "dropdown", href: "#" },
-              },
-              [
-                _c("i", { staticClass: "far fa-bell" }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  { staticClass: "badge badge-warning navbar-badge" },
-                  [_vm._v("15")]
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "dropdown-menu dropdown-menu-lg dropdown-menu-right",
-              },
-              [
-                _c("span", { staticClass: "dropdown-item dropdown-header" }, [
-                  _vm._v("15 Notifications"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "fas fa-envelope mr-2" }),
-                    _vm._v(" 4 new messages\n          "),
-                    _c(
-                      "span",
-                      { staticClass: "float-right text-muted text-sm" },
-                      [_vm._v("3 mins")]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "fas fa-users mr-2" }),
-                    _vm._v(" 8 friend requests\n          "),
-                    _c(
-                      "span",
-                      { staticClass: "float-right text-muted text-sm" },
-                      [_vm._v("12 hours")]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "fas fa-file mr-2" }),
-                    _vm._v(" 3 new reports\n          "),
-                    _c(
-                      "span",
-                      { staticClass: "float-right text-muted text-sm" },
-                      [_vm._v("2 days")]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "dropdown-divider" }),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "dropdown-item dropdown-footer",
-                    attrs: { href: "#" },
-                  },
-                  [_vm._v("See All Notifications")]
-                ),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: {
-                  "data-widget": "fullscreen",
-                  href: "#",
-                  role: "button",
-                },
-              },
-              [_c("i", { staticClass: "fas fa-expand-arrows-alt" })]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link",
-                attrs: {
-                  "data-widget": "control-sidebar",
-                  "data-slide": "true",
-                  href: "#",
-                  role: "button",
-                },
-              },
-              [_c("i", { staticClass: "fas fa-th-large" })]
-            ),
-          ]),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav-item d-none d-sm-inline-block" }, [
+        _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+          _vm._v("Contact"),
         ]),
-      ]
-    )
+      ]),
+    ])
   },
 ]
 render._withStripped = true
@@ -59894,6 +62465,168 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/auth/BackendLogin.vue?vue&type=template&id=0ef66366&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/auth/BackendLogin.vue?vue&type=template&id=0ef66366& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container my-4" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 offset-md-2" }, [
+        _c("div", { staticClass: "card" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _vm.errors && _vm.errors.length > 0
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "alert alert-danger alert-dismissible fade show",
+                    attrs: { role: "alert" },
+                  },
+                  [
+                    _vm._v(
+                      "\n                           " +
+                        _vm._s(_vm.errors) +
+                        "\n                         "
+                    ),
+                    _vm._m(1),
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function ($event) {
+                    $event.preventDefault()
+                    return _vm.adminLogin.apply(null, arguments)
+                  },
+                },
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Email")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.admin.email,
+                        expression: "admin.email",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "email" },
+                    domProps: { value: _vm.admin.email },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.admin, "email", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.email
+                    ? _c("span", { staticClass: "mt-1 text-danger" }, [
+                        _vm._v(_vm._s(_vm.errors.email[0])),
+                      ])
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "" } }, [_vm._v("Password")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.admin.password,
+                        expression: "admin.password",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "password" },
+                    domProps: { value: _vm.admin.password },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.admin, "password", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _vm.errors.email
+                    ? _c("span", { staticClass: "mt-1 text-danger" }, [
+                        _vm._v(_vm._s(_vm.errors.password[0])),
+                      ])
+                    : _vm._e(),
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "submit", value: "login" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h5", { staticClass: "text-center" }, [_vm._v("Admin Login")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "alert",
+          "aria-label": "Close",
+        },
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/main/BackendMaster.vue?vue&type=template&id=1d1cbef4&":
 /*!**************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/backend/main/BackendMaster.vue?vue&type=template&id=1d1cbef4& ***!
@@ -59913,11 +62646,11 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("backend-navbar"),
+      _vm.bar ? _c("backend-navbar") : _vm._e(),
       _vm._v(" "),
-      _c("backend-sidebar"),
+      _vm.bar ? _c("backend-sidebar") : _vm._e(),
       _vm._v(" "),
-      _c("div", { staticClass: "content-wrapper" }, [
+      _c("div", { class: { "content-wrapper": _vm.bar } }, [
         _c("section", { staticClass: "content" }, [
           _c(
             "div",
@@ -59928,7 +62661,7 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-      _c("backend-footer"),
+      _vm.bar ? _c("backend-footer") : _vm._e(),
     ],
     1
   )
@@ -60052,6 +62785,8212 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/frontend/PublicHome.vue?vue&type=template&id=4221aaac&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/frontend/PublicHome.vue?vue&type=template&id=4221aaac& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("section", { staticClass: "hero-slider" }, [
+        _c("div", { staticClass: "single-slider" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row no-gutters" }, [
+              _c("div", { staticClass: "col-lg-9 offset-lg-3 col-12" }, [
+                _c("div", { staticClass: "text-inner" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-lg-7 col-12" }, [
+                      _c("div", { staticClass: "hero-text" }, [
+                        _c("h1", [
+                          _c("span", [_vm._v("UP TO 50% OFF ")]),
+                          _vm._v("Shirt For Man"),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("Maboriosam in a nesciung eget magnae "),
+                          _c("br"),
+                          _vm._v(
+                            " dapibus disting tloctio in the find it pereri "
+                          ),
+                          _c("br"),
+                          _vm._v(" odiy maboriosm."),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "button" }, [
+                          _c(
+                            "a",
+                            { staticClass: "btn", attrs: { href: "#" } },
+                            [_vm._v("Shop Now!")]
+                          ),
+                        ]),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "small-banner section" }, [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-4 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-banner" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://via.placeholder.com/600x370",
+                    alt: "#",
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" }, [
+                  _c("p", [_vm._v("Man's Collectons")]),
+                  _vm._v(" "),
+                  _c("h3", [
+                    _vm._v("Summer travel "),
+                    _c("br"),
+                    _vm._v(" collection"),
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Discover Now")]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-4 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-banner" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://via.placeholder.com/600x370",
+                    alt: "#",
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" }, [
+                  _c("p", [_vm._v("Bag Collectons")]),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("Awesome Bag "), _c("br"), _vm._v(" 2020")]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Shop Now")]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-4 col-12" }, [
+              _c("div", { staticClass: "single-banner tab-height" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://via.placeholder.com/600x370",
+                    alt: "#",
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" }, [
+                  _c("p", [_vm._v("Flash Sale")]),
+                  _vm._v(" "),
+                  _c("h3", [
+                    _vm._v("Mid Season "),
+                    _c("br"),
+                    _vm._v(" Up to "),
+                    _c("span", [_vm._v("40%")]),
+                    _vm._v(" Off"),
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Discover Now")]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "product-area section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12" }, [
+              _c("div", { staticClass: "section-title" }, [
+                _c("h2", [_vm._v("Trending Item")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12" }, [
+              _c("div", { staticClass: "product-info" }, [
+                _c("div", { staticClass: "nav-main" }, [
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "nav nav-tabs",
+                      attrs: { id: "myTab", role: "tablist" },
+                    },
+                    [
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link active",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#man",
+                              role: "tab",
+                            },
+                          },
+                          [_vm._v("Man")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#women",
+                              role: "tab",
+                            },
+                          },
+                          [_vm._v("Woman")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#kids",
+                              role: "tab",
+                            },
+                          },
+                          [_vm._v("Kids")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#accessories",
+                              role: "tab",
+                            },
+                          },
+                          [_vm._v("Accessories")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#essential",
+                              role: "tab",
+                            },
+                          },
+                          [_vm._v("Essential")]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: {
+                              "data-toggle": "tab",
+                              href: "#prices",
+                              role: "tab",
+                            },
+                          },
+                          [_vm._v("Prices")]
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "tab-content", attrs: { id: "myTabContent" } },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "tab-pane fade show active",
+                        attrs: { id: "man", role: "tabpanel" },
+                      },
+                      [
+                        _c("div", { staticClass: "tab-single" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Hot Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Pink Show")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "new" }, [
+                                          _vm._v("New"),
+                                        ]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Pant Collectons")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "price-dec" },
+                                          [_vm._v("30% Off")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Cap For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Polo Dress For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "out-of-stock" },
+                                          [_vm._v("Hot")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Black Sunglass For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [
+                                          _c("span", { staticClass: "old" }, [
+                                            _vm._v("$60.00"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("span", [_vm._v("$50.00")]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "tab-pane fade",
+                        attrs: { id: "women", role: "tabpanel" },
+                      },
+                      [
+                        _c("div", { staticClass: "tab-single" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Hot Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Pink Show")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "new" }, [
+                                          _vm._v("New"),
+                                        ]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Pant Collectons")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "price-dec" },
+                                          [_vm._v("30% Off")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Cap For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Polo Dress For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "out-of-stock" },
+                                          [_vm._v("Hot")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Black Sunglass For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [
+                                          _c("span", { staticClass: "old" }, [
+                                            _vm._v("$60.00"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("span", [_vm._v("$50.00")]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "tab-pane fade",
+                        attrs: { id: "kids", role: "tabpanel" },
+                      },
+                      [
+                        _c("div", { staticClass: "tab-single" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Hot Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Pink Show")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "new" }, [
+                                          _vm._v("New"),
+                                        ]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Pant Collectons")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "price-dec" },
+                                          [_vm._v("30% Off")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Cap For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Polo Dress For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "out-of-stock" },
+                                          [_vm._v("Hot")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Black Sunglass For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [
+                                          _c("span", { staticClass: "old" }, [
+                                            _vm._v("$60.00"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("span", [_vm._v("$50.00")]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "tab-pane fade",
+                        attrs: { id: "accessories", role: "tabpanel" },
+                      },
+                      [
+                        _c("div", { staticClass: "tab-single" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Hot Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Pink Show")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "new" }, [
+                                          _vm._v("New"),
+                                        ]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Pant Collectons")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "price-dec" },
+                                          [_vm._v("30% Off")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Cap For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Polo Dress For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "out-of-stock" },
+                                          [_vm._v("Hot")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Black Sunglass For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [
+                                          _c("span", { staticClass: "old" }, [
+                                            _vm._v("$60.00"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("span", [_vm._v("$50.00")]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "tab-pane fade",
+                        attrs: { id: "essential", role: "tabpanel" },
+                      },
+                      [
+                        _c("div", { staticClass: "tab-single" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Hot Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Pink Show")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "new" }, [
+                                          _vm._v("New"),
+                                        ]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Pant Collectons")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "price-dec" },
+                                          [_vm._v("30% Off")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Cap For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Polo Dress For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "out-of-stock" },
+                                          [_vm._v("Hot")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Black Sunglass For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [
+                                          _c("span", { staticClass: "old" }, [
+                                            _vm._v("$60.00"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("span", [_vm._v("$50.00")]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "tab-pane fade",
+                        attrs: { id: "prices", role: "tabpanel" },
+                      },
+                      [
+                        _c("div", { staticClass: "tab-single" }, [
+                          _c("div", { staticClass: "row" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Hot Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Pink Show")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "new" }, [
+                                          _vm._v("New"),
+                                        ]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Women Pant Collectons")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Bags Collection")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "price-dec" },
+                                          [_vm._v("30% Off")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Awesome Cap For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Polo Dress For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [_c("span", [_vm._v("$29.00")])]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "col-xl-3 col-lg-4 col-md-4 col-12",
+                              },
+                              [
+                                _c("div", { staticClass: "single-product" }, [
+                                  _c("div", { staticClass: "product-img" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: { href: "product-details.html" },
+                                      },
+                                      [
+                                        _c("img", {
+                                          staticClass: "default-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c("img", {
+                                          staticClass: "hover-img",
+                                          attrs: {
+                                            src: "https://via.placeholder.com/550x750",
+                                            alt: "#",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          { staticClass: "out-of-stock" },
+                                          [_vm._v("Hot")]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "button-head" }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                "data-toggle": "modal",
+                                                "data-target": "#exampleModal",
+                                                title: "Quick View",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-eye",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Quick Shop"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Wishlist",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: " ti-heart ",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Wishlist"),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Compare",
+                                                href: "#",
+                                              },
+                                            },
+                                            [
+                                              _c("i", {
+                                                staticClass: "ti-bar-chart-alt",
+                                              }),
+                                              _c("span", [
+                                                _vm._v("Add to Compare"),
+                                              ]),
+                                            ]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-action-2" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                title: "Add to cart",
+                                                href: "#",
+                                              },
+                                            },
+                                            [_vm._v("Add to cart")]
+                                          ),
+                                        ]
+                                      ),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "product-content" },
+                                    [
+                                      _c("h3", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: "product-details.html",
+                                            },
+                                          },
+                                          [_vm._v("Black Sunglass For Women")]
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "product-price" },
+                                        [
+                                          _c("span", { staticClass: "old" }, [
+                                            _vm._v("$60.00"),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("span", [_vm._v("$50.00")]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    ),
+                  ]
+                ),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "midium-banner" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-banner" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://via.placeholder.com/600x370",
+                    alt: "#",
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" }, [
+                  _c("p", [_vm._v("Man's Collectons")]),
+                  _vm._v(" "),
+                  _c("h3", [
+                    _vm._v("Man's items "),
+                    _c("br"),
+                    _vm._v("Up to"),
+                    _c("span", [_vm._v(" 50%")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Shop Now")]),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-banner" }, [
+                _c("img", {
+                  attrs: {
+                    src: "https://via.placeholder.com/600x370",
+                    alt: "#",
+                  },
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "content" }, [
+                  _c("p", [_vm._v("shoes women")]),
+                  _vm._v(" "),
+                  _c("h3", [
+                    _vm._v("mid season "),
+                    _c("br"),
+                    _vm._v(" up to "),
+                    _c("span", [_vm._v("70%")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { staticClass: "btn", attrs: { href: "#" } }, [
+                    _vm._v("Shop Now"),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "product-area most-popular section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12" }, [
+              _c("div", { staticClass: "section-title" }, [
+                _c("h2", [_vm._v("Hot Item")]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12" }, [
+              _c("div", { staticClass: "owl-carousel popular-slider" }, [
+                _c("div", { staticClass: "single-product" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("a", { attrs: { href: "product-details.html" } }, [
+                      _c("img", {
+                        staticClass: "default-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "hover-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "out-of-stock" }, [
+                        _vm._v("Hot"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "button-head" }, [
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-toggle": "modal",
+                              "data-target": "#exampleModal",
+                              title: "Quick View",
+                              href: "#",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: " ti-eye" }),
+                            _c("span", [_vm._v("Quick Shop")]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Wishlist", href: "#" } }, [
+                          _c("i", { staticClass: " ti-heart " }),
+                          _c("span", [_vm._v("Add to Wishlist")]),
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Compare", href: "#" } }, [
+                          _c("i", { staticClass: "ti-bar-chart-alt" }),
+                          _c("span", [_vm._v("Add to Compare")]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action-2" }, [
+                        _c(
+                          "a",
+                          { attrs: { title: "Add to cart", href: "#" } },
+                          [_vm._v("Add to cart")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "product-content" }, [
+                    _c("h3", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Black Sunglass For Women"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price" }, [
+                      _c("span", { staticClass: "old" }, [_vm._v("$60.00")]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v("$50.00")]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "single-product" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("a", { attrs: { href: "product-details.html" } }, [
+                      _c("img", {
+                        staticClass: "default-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "hover-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "button-head" }, [
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-toggle": "modal",
+                              "data-target": "#exampleModal",
+                              title: "Quick View",
+                              href: "#",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: " ti-eye" }),
+                            _c("span", [_vm._v("Quick Shop")]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Wishlist", href: "#" } }, [
+                          _c("i", { staticClass: " ti-heart " }),
+                          _c("span", [_vm._v("Add to Wishlist")]),
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Compare", href: "#" } }, [
+                          _c("i", { staticClass: "ti-bar-chart-alt" }),
+                          _c("span", [_vm._v("Add to Compare")]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action-2" }, [
+                        _c(
+                          "a",
+                          { attrs: { title: "Add to cart", href: "#" } },
+                          [_vm._v("Add to cart")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "product-content" }, [
+                    _c("h3", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Women Hot Collection"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price" }, [
+                      _c("span", [_vm._v("$50.00")]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "single-product" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("a", { attrs: { href: "product-details.html" } }, [
+                      _c("img", {
+                        staticClass: "default-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "hover-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "new" }, [_vm._v("New")]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "button-head" }, [
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-toggle": "modal",
+                              "data-target": "#exampleModal",
+                              title: "Quick View",
+                              href: "#",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: " ti-eye" }),
+                            _c("span", [_vm._v("Quick Shop")]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Wishlist", href: "#" } }, [
+                          _c("i", { staticClass: " ti-heart " }),
+                          _c("span", [_vm._v("Add to Wishlist")]),
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Compare", href: "#" } }, [
+                          _c("i", { staticClass: "ti-bar-chart-alt" }),
+                          _c("span", [_vm._v("Add to Compare")]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action-2" }, [
+                        _c(
+                          "a",
+                          { attrs: { title: "Add to cart", href: "#" } },
+                          [_vm._v("Add to cart")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "product-content" }, [
+                    _c("h3", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Awesome Pink Show"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price" }, [
+                      _c("span", [_vm._v("$50.00")]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "single-product" }, [
+                  _c("div", { staticClass: "product-img" }, [
+                    _c("a", { attrs: { href: "product-details.html" } }, [
+                      _c("img", {
+                        staticClass: "default-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "hover-img",
+                        attrs: {
+                          src: "https://via.placeholder.com/550x750",
+                          alt: "#",
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "button-head" }, [
+                      _c("div", { staticClass: "product-action" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              "data-toggle": "modal",
+                              "data-target": "#exampleModal",
+                              title: "Quick View",
+                              href: "#",
+                            },
+                          },
+                          [
+                            _c("i", { staticClass: " ti-eye" }),
+                            _c("span", [_vm._v("Quick Shop")]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Wishlist", href: "#" } }, [
+                          _c("i", { staticClass: " ti-heart " }),
+                          _c("span", [_vm._v("Add to Wishlist")]),
+                        ]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { title: "Compare", href: "#" } }, [
+                          _c("i", { staticClass: "ti-bar-chart-alt" }),
+                          _c("span", [_vm._v("Add to Compare")]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-action-2" }, [
+                        _c(
+                          "a",
+                          { attrs: { title: "Add to cart", href: "#" } },
+                          [_vm._v("Add to cart")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "product-content" }, [
+                    _c("h3", [
+                      _c("a", { attrs: { href: "product-details.html" } }, [
+                        _vm._v("Awesome Bags Collection"),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-price" }, [
+                      _c("span", [_vm._v("$50.00")]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "section free-version-banner" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("div", { staticClass: "col-md-8 offset-md-2 col-xs-12" }, [
+              _c("div", { staticClass: "section-title mb-60" }, [
+                _c(
+                  "span",
+                  {
+                    staticClass: "text-white wow fadeInDown",
+                    staticStyle: {
+                      visibility: "visible",
+                      "animation-delay": "0.2s",
+                      "animation-name": "fadeInDown",
+                    },
+                    attrs: { "data-wow-delay": ".2s" },
+                  },
+                  [_vm._v("Eshop Free Lite version")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "h2",
+                  {
+                    staticClass: "text-white wow fadeInUp",
+                    staticStyle: {
+                      visibility: "visible",
+                      "animation-delay": "0.4s",
+                      "animation-name": "fadeInUp",
+                    },
+                    attrs: { "data-wow-delay": ".4s" },
+                  },
+                  [
+                    _vm._v("Currently You are using free"),
+                    _c("br"),
+                    _vm._v(" lite Version of Eshop."),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass: "text-white wow fadeInUp",
+                    staticStyle: {
+                      visibility: "visible",
+                      "animation-delay": "0.6s",
+                      "animation-name": "fadeInUp",
+                    },
+                    attrs: { "data-wow-delay": ".6s" },
+                  },
+                  [
+                    _vm._v(
+                      "Please, purchase full version of the template to get all pages,"
+                    ),
+                    _c("br"),
+                    _vm._v(" features and commercial license."),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "button" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn wow fadeInUp",
+                      attrs: {
+                        href: "https://wpthemesgrid.com/downloads/eshop-ecommerce-html5-template/",
+                        target: "_blank",
+                        rel: "nofollow",
+                        "data-wow-delay": ".8s",
+                      },
+                    },
+                    [_vm._v("Purchase Now")]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "shop-home-list section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-4 col-md-6 col-12" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-12" }, [
+                  _c("div", { staticClass: "shop-section-title" }, [
+                    _c("h1", [_vm._v("On sale")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h4", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$59"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$44"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$89"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-4 col-md-6 col-12" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-12" }, [
+                  _c("div", { staticClass: "shop-section-title" }, [
+                    _c("h1", [_vm._v("Best Seller")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$65"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$33"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$77"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-4 col-md-6 col-12" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-12" }, [
+                  _c("div", { staticClass: "shop-section-title" }, [
+                    _c("h1", [_vm._v("Top viewed")]),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$22"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$35"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "single-list" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-6 col-md-6 col-12" }, [
+                    _c("div", { staticClass: "list-image overlay" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://via.placeholder.com/115x140",
+                          alt: "#",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "buy", attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-shopping-bag" }),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-lg-6 col-md-6 col-12 no-padding" },
+                    [
+                      _c("div", { staticClass: "content" }, [
+                        _c("h5", { staticClass: "title" }, [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Licity jelly leg flat Sandals"),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "price with-discount" }, [
+                          _vm._v("$99"),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "shop-services section home" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-3 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-service" }, [
+                _c("i", { staticClass: "ti-rocket" }),
+                _vm._v(" "),
+                _c("h4", [_vm._v("Free shiping")]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Orders over $100")]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-service" }, [
+                _c("i", { staticClass: "ti-reload" }),
+                _vm._v(" "),
+                _c("h4", [_vm._v("Free Return")]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Within 30 days returns")]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-service" }, [
+                _c("i", { staticClass: "ti-lock" }),
+                _vm._v(" "),
+                _c("h4", [_vm._v("Sucure Payment")]),
+                _vm._v(" "),
+                _c("p", [_vm._v("100% secure payment")]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3 col-md-6 col-12" }, [
+              _c("div", { staticClass: "single-service" }, [
+                _c("i", { staticClass: "ti-tag" }),
+                _vm._v(" "),
+                _c("h4", [_vm._v("Best Peice")]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Guaranteed price")]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "shop-newsletter section" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "inner-top" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-8 offset-lg-2 col-12" }, [
+                _c("div", { staticClass: "inner" }, [
+                  _c("h4", [_vm._v("Newsletter")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(" Subscribe to our newsletter and get "),
+                    _c("span", [_vm._v("10%")]),
+                    _vm._v(" off your first purchase"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "form",
+                    {
+                      staticClass: "newsletter-inner",
+                      attrs: {
+                        action: "mail/mail.php",
+                        method: "get",
+                        target: "_blank",
+                      },
+                    },
+                    [
+                      _c("input", {
+                        attrs: {
+                          name: "EMAIL",
+                          placeholder: "Your email address",
+                          required: "",
+                          type: "email",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("button", { staticClass: "btn" }, [
+                        _vm._v("Subscribe"),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -75382,6 +86321,42 @@ Vue.compile = compileToFunctions;
 
 /***/ }),
 
+/***/ "./node_modules/vuejs-loading-plugin/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/vuejs-loading-plugin/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "asyncLoading": () => (/* binding */ asyncLoading)
+/* harmony export */ });
+/* harmony import */ var _Loading_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Loading.vue */ "./node_modules/vuejs-loading-plugin/Loading.vue");
+
+let vm = {}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  install(Vue, opts) {
+    opts = opts || {}
+    const loadingPlugin = Vue.extend( _Loading_vue__WEBPACK_IMPORTED_MODULE_0__["default"] )
+    vm = new loadingPlugin({
+      data: opts
+    }).$mount()   
+    document.body.appendChild(vm.$el)
+    Vue.prototype.$loading = ( loading ) => vm.loading = loading
+  }
+});
+const asyncLoading = function(fn){
+  return new Promise((resolve, reject) => {
+    vm.loading = true
+    const finished = cb => { return (result) => { cb(result); vm.loading = false }}
+    fn.then(finished(resolve)).catch(finished(reject))
+  })
+}
+
+/***/ }),
+
 /***/ "./node_modules/vuex/dist/vuex.esm.js":
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
@@ -76759,50 +87734,79 @@ var __webpack_exports__ = {};
   !*** ./resources/js/backend.js ***!
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _store_backend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store/backend */ "./resources/js/store/backend/index.js");
-/* harmony import */ var _routes_adminroute__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes/adminroute */ "./resources/js/routes/adminroute.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
+/* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var nprogress_nprogress_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nprogress/nprogress.css */ "./node_modules/nprogress/nprogress.css");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store_backend__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/backend */ "./resources/js/store/backend/index.js");
+/* harmony import */ var _routes_adminroute__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./routes/adminroute */ "./resources/js/routes/adminroute.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vuejs_loading_plugin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuejs-loading-plugin */ "./node_modules/vuejs-loading-plugin/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
+ ///nprogress
+
+
  ///sweet alert
 
 
-window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default());
-var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().mixin({
+window.Swal = (sweetalert2__WEBPACK_IMPORTED_MODULE_2___default());
+var Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().mixin({
   toast: true,
   position: 'top-end',
   showConfirmButton: false,
   timer: 3000,
   timerProgressBar: true,
   onOpen: function onOpen(toast) {
-    toast.addEventListener('mouseenter', (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().stopTimer));
-    toast.addEventListener('mouseleave', (sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().resumeTimer));
+    toast.addEventListener('mouseenter', (sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().stopTimer));
+    toast.addEventListener('mouseleave', (sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().resumeTimer));
   }
 });
 window.Toast = Toast; //vuex backend file
 
- //vue router
+ ///component
+
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].component('backend-master', (__webpack_require__(/*! ./components/backend/main/BackendMaster.vue */ "./resources/js/components/backend/main/BackendMaster.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].component('backend-navbar', (__webpack_require__(/*! ./components/backend/BackendNavbar.vue */ "./resources/js/components/backend/BackendNavbar.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].component('backend-sidebar', (__webpack_require__(/*! ./components/backend/BackendSidebar.vue */ "./resources/js/components/backend/BackendSidebar.vue")["default"]));
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].component('backend-footer', (__webpack_require__(/*! ./components/backend/BackendFooter.vue */ "./resources/js/components/backend/BackendFooter.vue")["default"])); //vue router
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
-  routes: _routes_adminroute__WEBPACK_IMPORTED_MODULE_2__.routes,
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]); ///vue loading 
+
+
+vue__WEBPACK_IMPORTED_MODULE_4__["default"].use(vuejs_loading_plugin__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  dark: true,
+  // default false
+  text: 'Waiting',
+  // default 'Loading'
+  background: 'rgb(255,255,255)',
+  // set custom background
+  classes: ['myclass'] // array, object or string
+
+});
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_6__["default"]({
+  routes: _routes_adminroute__WEBPACK_IMPORTED_MODULE_5__.routes,
   mode: 'history'
-}); ///component
+});
+router.beforeResolve(function (to, from, next) {
+  if (to.name) {
+    nprogress__WEBPACK_IMPORTED_MODULE_0___default().start();
+  }
 
-vue__WEBPACK_IMPORTED_MODULE_3__["default"].component('backend-master', (__webpack_require__(/*! ./components/backend/main/BackendMaster.vue */ "./resources/js/components/backend/main/BackendMaster.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_3__["default"].component('backend-navbar', (__webpack_require__(/*! ./components/backend/BackendNavbar.vue */ "./resources/js/components/backend/BackendNavbar.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_3__["default"].component('backend-sidebar', (__webpack_require__(/*! ./components/backend/BackendSidebar.vue */ "./resources/js/components/backend/BackendSidebar.vue")["default"]));
-vue__WEBPACK_IMPORTED_MODULE_3__["default"].component('backend-footer', (__webpack_require__(/*! ./components/backend/BackendFooter.vue */ "./resources/js/components/backend/BackendFooter.vue")["default"]));
-var backend = new vue__WEBPACK_IMPORTED_MODULE_3__["default"]({
+  next();
+});
+router.afterEach(function (to, from) {
+  nprogress__WEBPACK_IMPORTED_MODULE_0___default().done();
+});
+var backend = new vue__WEBPACK_IMPORTED_MODULE_4__["default"]({
   el: '#backend',
   router: router,
-  store: _store_backend__WEBPACK_IMPORTED_MODULE_1__["default"]
+  store: _store_backend__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 })();
 

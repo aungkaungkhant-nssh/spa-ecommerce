@@ -54,13 +54,19 @@ export default {
   methods:{
       async createAdmin(){
           try{
-              await axios.post("/api/admin/create-admin",this.admin);
+              //start loading
+              this.$loading(true)
+              await axios.post("/admin/create-admin",this.admin);
               this.$router.push({name:"HomeAdmin"});
+               //end loading
+              this.$loading(false)
                Toast.fire({
                     icon: 'success',
                     title: 'Admin User Create Success'
                 })
           }catch(error){
+              //end loading
+              this.$loading(false)
               this.errors=error.response.data.errors;
           }
       }

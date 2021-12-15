@@ -20,7 +20,7 @@ class AdminUserApiController extends Controller
             "name"=>$request->name,
             "email"=>$request->email,
             "phone"=>$request->phone,
-            "password"=>Hash::make($request->passsword)
+            "password"=>Hash::make($request->password)
         ]);
         return success("Admin Create Success",$admin);
     }
