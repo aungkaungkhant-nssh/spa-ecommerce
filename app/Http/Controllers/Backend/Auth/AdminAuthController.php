@@ -13,6 +13,7 @@ class AdminAuthController extends Controller
     {
         $this->middleware('guest:admin')->except('logout');
     }
+    
     public function showLogin(){
         return view("auth.backendlogin");
     }

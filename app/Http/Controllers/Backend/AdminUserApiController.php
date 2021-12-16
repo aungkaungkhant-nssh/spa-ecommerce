@@ -5,10 +5,15 @@ namespace App\Http\Controllers\Backend;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AdminUserApiController extends Controller
 {
+    public function getLoginAdmin(){
+       $data= Auth::guard('admin')->user();
+       return success("Login Admin User",$data);
+    }
     public function store(Request $request){
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -24,6 +29,7 @@ class AdminUserApiController extends Controller
         ]);
         return success("Admin Create Success",$admin);
     }
+    
     public function getAdmin(){
         $admin=Admin::orderBy("id","desc")->get();
         return success("Get Admin",$admin);

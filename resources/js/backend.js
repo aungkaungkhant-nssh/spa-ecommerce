@@ -5,6 +5,7 @@ import Vue from 'vue';
 ///nprogress
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+
 ///sweet alert
 import Swal from 'sweetalert2'
 window.Swal = Swal
@@ -29,10 +30,12 @@ Vue.component('backend-master', require('./components/backend/main/BackendMaster
 Vue.component('backend-navbar', require('./components/backend/BackendNavbar.vue').default);
 Vue.component('backend-sidebar', require('./components/backend/BackendSidebar.vue').default);
 Vue.component('backend-footer', require('./components/backend/BackendFooter.vue').default);
+
 //vue router
 import {routes} from './routes/adminroute'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
+
 ///vue loading 
 import VueLoading from 'vuejs-loading-plugin'
 Vue.use(VueLoading, {
@@ -41,6 +44,9 @@ Vue.use(VueLoading, {
   background: 'rgb(255,255,255)', // set custom background
   classes: ['myclass'] // array, object or string
 })
+///portal vue
+import PortalVue from 'portal-vue'
+Vue.use(PortalVue)
 
 const router = new VueRouter({
   routes ,

@@ -12,7 +12,7 @@
             <!-- <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"> -->
           </div>
           <div class="info">
-            <a href="#" class="d-block">Aung Kaung Khant</a>
+            <a href="#" class="d-block">{{loginAdmin.name}}</a>
           </div>
         </div>
         <!-- Sidebar Menu -->
@@ -64,8 +64,13 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
-
+ computed:{...mapGetters(["loginAdmin"])},
+ methods:{...mapActions(["getLoginAdmin"])},
+  mounted(){
+      this.getLoginAdmin()
+  }
 }
 </script>
 

@@ -23,6 +23,7 @@
 </template>
 
 <script>
+
 import BackendFooter from '../BackendFooter.vue'
 import BackendNavbar from '../BackendNavbar.vue'
 import BackendSidbar from '../BackendSidebar.vue'
@@ -37,6 +38,8 @@ export default {
       }
     }
   },
+  
+  
  
 
 }

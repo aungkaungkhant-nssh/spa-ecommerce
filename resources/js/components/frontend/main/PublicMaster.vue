@@ -4,7 +4,6 @@
 	<public-header v-if="bar"></public-header>
 	<!--/ End Header -->
 	<router-view ></router-view>	
-	<!-- <vue-progress-bar></vue-progress-bar> -->
 	<!-- Start Footer Area -->
 	<public-footer v-if="bar"></public-footer>
 	<!-- /End Footer Area -->
@@ -17,9 +16,17 @@ import PublicFooter from '../PublicFooter.vue'
 import PublicHeader from '../PublicHeader.vue'
 
 export default {
+	data(){
+		return{
+			route:["/"]
+		}
+	},
   	components: { PublicHeader, PublicFooter },
 	computed:{  
 		bar(){
+			if(this.route.indexOf(this.$route.path)<0){
+				return false
+			}
 			if(this.$route.path=="/register" || this.$route.path=="/login"){
 				return false;
 			}else{

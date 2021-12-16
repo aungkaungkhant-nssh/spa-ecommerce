@@ -13,6 +13,9 @@ Route::post("/admin/login",[AdminAuthController::class,"login"]);
 
 Route::prefix("/admin")->middleware(["auth:admin"])->group(function(){
     Route::post("/logout",[AdminAuthController::class,"logout"]);
+    ///get login admin user
+    Route::get('/login-admin',[AdminUserApiController::class,"getLoginAdmin"]);
+    //admin crud operation
     Route::post("/create-admin",[AdminUserApiController::class,"store"]);
     Route::get("/get-admin",[AdminUserApiController::class,"getAdmin"]);
     Route::get('/edit-admin/{id}',[AdminUserApiController::class,"editAdmin"]);

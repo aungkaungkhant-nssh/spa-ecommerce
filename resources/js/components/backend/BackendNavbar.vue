@@ -22,13 +22,16 @@
           Logout<i class="fas fa-sign-out-alt ml-2"></i>
         </button>
       </li>
+      {{loginAdmin}}
     </ul>
   </nav>
 </template>
 
 <script>
+import { mapActions} from 'vuex'
 export default {
   methods:{
+    ...mapActions(["getLoginAdmin"]),
     async adminLogout(){
       try{
           this.$loading(true)
@@ -39,7 +42,8 @@ export default {
         console.log(error)
       }
     }
-  }
+  },
+ 
 }
 </script>
 

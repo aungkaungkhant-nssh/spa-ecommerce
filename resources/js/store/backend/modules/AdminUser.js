@@ -2,10 +2,14 @@ import axios from "axios"
 
 export default{
     state:{
+        loginAdmin:{},
         adminUser:[],
         adminEdit:{}
     },
     getters:{
+        loginAdmin(state){
+            return state.loginAdmin
+        },
         adminUser(state){
             return state.adminUser
         },
@@ -14,6 +18,9 @@ export default{
         }
     },
     mutations:{
+        updateLoginAdmin(state,value){
+            state.loginAdmin=value
+        },
         updateAdminUser(state,value){
             state.adminUser=value;
         },
@@ -25,9 +32,16 @@ export default{
         }
     },
     actions:{
+       async getLoginAdmin({commit}){
+           try{
+                let res= await axios.get('/admin/login-admin')
+                commit("updateLoginAdmin",res.data.data)
+           }catch(error){
+               console.log(error)
+           }
+       },
        async getAdminUser({commit}){
            try{
-               
                let response=await axios.get('/admin/get-admin')
                setTimeout(() => {
                 $("#datatable").DataTable({
