@@ -45,7 +45,6 @@ export default {
   methods:{
     ...mapActions(["editAdminUser","updateAdminUser"]),
     updateAdmin(){
-     
         this.updateAdminUser(this.adminEdit);
         this.$router.push({name:"HomeAdmin"});
       

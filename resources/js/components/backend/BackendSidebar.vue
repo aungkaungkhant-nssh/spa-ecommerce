@@ -18,42 +18,34 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                  Tables
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/tables/simple.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Simple Tables</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>DataTables</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>jsGrid</p>
-                  </a>
-                </li>
-              </ul>
-            </li> -->
+            
              <li class="nav-item">
-              <router-link to="/admin/admin-user" class="nav-link">
+              <router-link :to="route.adminUser" class="nav-link" :class="{active:currentRoute==route.adminUser}">
                 <i class="fas fa-user-shield"></i>
                 <p>
                   Admin user
                 </p>
               </router-link>
+            </li>
+            
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Products
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <router-link :to="route.category" class="nav-link" :class="{active:currentRoute==route.category}">
+                       <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        Category
+                      </p>
+                    </router-link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -66,10 +58,25 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 export default {
- computed:{...mapGetters(["loginAdmin"])},
+ computed:{
+   ...mapGetters(["loginAdmin"]),
+    currentRoute(){
+        return this.$route.path
+    }  
+  },
+  data(){
+    return{
+      route:{
+         adminUser:'/admin/admin-user',
+         category:'/admin/category'
+      }
+    }
+  },
  methods:{...mapActions(["getLoginAdmin"])},
+ 
   mounted(){
       this.getLoginAdmin()
+   
   }
 }
 </script>

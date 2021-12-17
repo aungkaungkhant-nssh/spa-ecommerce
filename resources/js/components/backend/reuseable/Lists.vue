@@ -11,9 +11,9 @@
       </thead>
       <tbody v-if="data.length>=0">
         <tr v-for="d in data" :key="d.id">
-          <td>{{ d.name }}</td>
-          <td>{{ d.email }}</td>
-          <td>{{ d.phone }}</td>
+          <td v-if=d.name>{{  d.name }}</td>
+          <td v-if=d.email>{{ d.email }}</td>
+          <td v-if=d.phone>{{  d.phone }}</td>
           <td>
               <button class="btn btn-warning btn-sm" @click="editData(d.id)"><i class="fas fa-edit"></i></button>
           </td>

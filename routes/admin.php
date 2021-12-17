@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\Auth\AdminAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminUserApiController;
+use App\Http\Controllers\Backend\CategoryApiController;
 
 // Route::get("/admin/login",[AdminAuthController::class,"showLogin"]
 // )->name("admin.login");
@@ -21,6 +22,8 @@ Route::prefix("/admin")->middleware(["auth:admin"])->group(function(){
     Route::get('/edit-admin/{id}',[AdminUserApiController::class,"editAdmin"]);
     Route::put("/update-admin",[AdminUserApiController::class,"updateAdmin"]);
     Route::delete("delete-admin/{id}",[AdminUserApiController::class,"destroyAdmin"]);
+    ///category crud operation
+    Route::resource('categories', CategoryApiController::class);
     Route::get('{any}', function () {
         return view('backend.home');
     })->where("any",".*");

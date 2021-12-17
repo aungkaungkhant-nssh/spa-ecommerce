@@ -22,7 +22,7 @@
           Logout<i class="fas fa-sign-out-alt ml-2"></i>
         </button>
       </li>
-      {{loginAdmin}}
+   
     </ul>
   </nav>
 </template>
