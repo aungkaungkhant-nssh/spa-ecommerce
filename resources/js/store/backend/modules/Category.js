@@ -53,8 +53,6 @@ export default{
         async updateCategory({commit},data){
             try{
                 let res= await axios.put(`/admin/categories/${data.id}`,data)
-                console.log(res)
-                return;
                 commit("updateAdminEdit",{})
             }catch(error){
                 console.log(error)

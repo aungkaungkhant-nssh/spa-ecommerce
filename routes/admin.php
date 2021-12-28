@@ -3,7 +3,9 @@
 use App\Http\Controllers\Backend\Auth\AdminAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminUserApiController;
+use App\Http\Controllers\Backend\BrandApiController;
 use App\Http\Controllers\Backend\CategoryApiController;
+use App\Http\Controllers\Backend\ProductApiController;
 
 // Route::get("/admin/login",[AdminAuthController::class,"showLogin"]
 // )->name("admin.login");
@@ -24,6 +26,10 @@ Route::prefix("/admin")->middleware(["auth:admin"])->group(function(){
     Route::delete("delete-admin/{id}",[AdminUserApiController::class,"destroyAdmin"]);
     ///category crud operation
     Route::resource('categories', CategoryApiController::class);
+    ///brand crud operation
+    Route::resource("brands",BrandApiController::class);
+    //product
+    Route::resource('products', ProductApiController::class);
     Route::get('{any}', function () {
         return view('backend.home');
     })->where("any",".*");

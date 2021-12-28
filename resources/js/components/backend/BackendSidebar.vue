@@ -29,7 +29,7 @@
             </li>
             
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" >
                 <i class="nav-icon fas fa-table"></i>
                 <p>
                   Products
@@ -42,6 +42,22 @@
                        <i class="far fa-circle nav-icon"></i>
                       <p>
                         Category
+                      </p>
+                    </router-link>
+                </li>
+                 <li class="nav-item">
+                    <router-link :to="route.brand" class="nav-link" :class="{active:currentRoute==route.brand}">
+                       <i class="far fa-circle nav-icon"></i>
+                      <p>
+                         Brand
+                      </p>
+                    </router-link>
+                </li>
+                 <li class="nav-item">
+                    <router-link :to="route.product" class="nav-link" :class="{active:currentRoute==route.product}">
+                       <i class="far fa-circle nav-icon"></i>
+                      <p>
+                         Product
                       </p>
                     </router-link>
                 </li>
@@ -68,7 +84,9 @@ export default {
     return{
       route:{
          adminUser:'/admin/admin-user',
-         category:'/admin/category'
+         category:'/admin/category',
+         product:'/admin/product',
+         brand:'/admin/brand'
       }
     }
   },

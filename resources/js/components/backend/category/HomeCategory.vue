@@ -34,7 +34,7 @@ export default {
       this.deleteCategory(id);
       Toast.fire({
         icon: 'success',
-        title: 'Admin User Update Success'
+        title: 'Category Delete Success'
       })
     }
   },
