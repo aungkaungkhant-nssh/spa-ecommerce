@@ -6,7 +6,7 @@
               {{column}}
           </th>
           <th v-if="products">View</th>
-          <th>Edit</th>
+          <th v-if="$route.path!='/admin/customer'">Edit</th>
           <th>Delete</th>
         </tr>
       </thead>
@@ -16,11 +16,12 @@
           <td v-if=d.email>{{ d.email }}</td>
           <td v-if=d.phone>{{  d.phone }}</td>
            
-          <td>
+          <td v-if="$route.path!='/admin/customer'">
               <button class="btn btn-warning btn-sm" @click="editData(d.id)"><i class="fas fa-edit"></i></button>
           </td>
           <td>
               <button class="btn btn-danger btn-sm" @click="deleteData(d.id)"><i class="fas fa-trash"></i></button>
+              
           </td>
         </tr>
       </tbody>
@@ -74,7 +75,7 @@ export default {
         this.$emit("deleteData",id)
       },
       
-    },
+    }
   
 }
 </script>

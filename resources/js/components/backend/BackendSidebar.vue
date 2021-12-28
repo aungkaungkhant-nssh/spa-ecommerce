@@ -27,7 +27,14 @@
                 </p>
               </router-link>
             </li>
-            
+             <li class="nav-item">
+              <router-link :to="route.customer" class="nav-link" :class="{active:currentRoute==route.customer}">
+                <i class="fas fa-users"></i>
+                <p>
+                   Customer
+                </p>
+              </router-link>
+            </li>
             <li class="nav-item">
               <a href="#" class="nav-link" >
                 <i class="nav-icon fas fa-table"></i>
@@ -61,6 +68,7 @@
                       </p>
                     </router-link>
                 </li>
+               
               </ul>
             </li>
           </ul>
@@ -86,7 +94,8 @@ export default {
          adminUser:'/admin/admin-user',
          category:'/admin/category',
          product:'/admin/product',
-         brand:'/admin/brand'
+         brand:'/admin/brand',
+         customer:'/admin/customer'
       }
     }
   },

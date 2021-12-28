@@ -13,6 +13,7 @@ import EditProduct from '../components/backend/product/EditProduct'
 import HomeBrand from '../components/backend/brand/HomeBrand'
 import CreateBrand from '../components/backend/brand/CreateBrand'
 import EditBrand from '../components/backend/brand/EditBrand'
+import HomeCustomer from '../components/backend/customer/HomeCustomer'
 import NotFound from '../components/404/NotFound'
 export const routes = [
     { path: '/', component: PublicHome ,name:"Home"},
@@ -33,6 +34,8 @@ export const routes = [
     {path:"/admin/product/create",component:CreateProduct,name:"CreateProduct"},
     {path:"/admin/product/detail/:id",component:DetailProduct,name:"DetailProduct"},
     {path:'/admin/product/edit/:id',component:EditProduct,name:"EditProduct"},
+    //customer
+    {path:"/admin/customer",component:HomeCustomer,name:"HomeCustomer"},
     { path: '*', component: NotFound }
   ]
 

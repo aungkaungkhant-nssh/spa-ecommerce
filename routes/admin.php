@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminUserApiController;
 use App\Http\Controllers\Backend\BrandApiController;
 use App\Http\Controllers\Backend\CategoryApiController;
+use App\Http\Controllers\Backend\CustomerApiController;
 use App\Http\Controllers\Backend\ProductApiController;
 
 // Route::get("/admin/login",[AdminAuthController::class,"showLogin"]
@@ -30,6 +31,8 @@ Route::prefix("/admin")->middleware(["auth:admin"])->group(function(){
     Route::resource("brands",BrandApiController::class);
     //product
     Route::resource('products', ProductApiController::class);
+    //customer
+    Route::resource('customers', CustomerApiController::class);
     Route::get('{any}', function () {
         return view('backend.home');
     })->where("any",".*");
