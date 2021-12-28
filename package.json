@@ -11,8 +11,8 @@
     },
     "devDependencies": {
         "axios": "^0.21",
-        "bootstrap": "^4.6.0",
-        "jquery": "^3.6",
+        "bootstrap": "^4.6.1",
+        "jquery": "^3.6.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
@@ -25,9 +25,14 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "datatables.net-dt": "^1.11.3",
         "nprogress": "^0.2.0",
+        "portal-vue": "^2.1.7",
+        "sweetalert2": "^11.3.0",
+        "vue-owl-carousel2": "^2.0.7",
         "vue-progressbar": "^0.7.5",
         "vue-router": "^3.5.3",
+        "vue-sweetalert2": "^5.0.2",
         "vuejs-loading-plugin": "^1.0.51",
         "vuex": "^3.6.2"
     }

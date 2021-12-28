@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\Auth\AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Route::post("/admin/login",[AdminAuthController::class,"login"]);
+
 Route::get('/{any}', function () {
     return view('frontend.home');
 })->where('any', '.*');
-
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
